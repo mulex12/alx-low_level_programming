@@ -1,34 +1,24 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * print_number - function prints an integer
- *
- *@n: integer
- *
- * Return: nothing
- */
-
+  * print_number - we're printing some serious numbers
+  * @n: that's the number, fear it.
+  *
+  * Return: void
+  */
 void print_number(int n)
 {
-	int y = 1000000000;
-	int x, z;
+	unsigned int num;
 
-	for (x = 0; x < 10; x++)
+	if (n < 0)
 	{
-		if ((n / y) == 0 && z == 0)
-		{
-			y = (y / 10);
-			continue;
-		}
-		else if (z == 0)
-		{
-			_putchar((n / y) + '0');
-			z++;
-		}
-		else
-		{
-			_putchar ((n / y) % 10 + '0');
-		}
-		y = (y / 10);
+		_putchar('-');
+		num = -n;
 	}
+	else
+		num = n;
+
+	if (num / 10)
+		print_number(num / 10);
+	_putchar('0' + num % 10);
 }
