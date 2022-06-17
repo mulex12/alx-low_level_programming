@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include "_putchar.c"
 /**
  * print_times_table - print times table of the specified dimension
  * @n: Dimension of times table
