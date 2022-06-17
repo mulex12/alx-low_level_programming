@@ -2,7 +2,7 @@
 /**
  * print_alphabet - a function that prints the alphabet, in lowercase
  */
-void print_alphabet(void)
+void print_alphabet1(void)
 {
 	int i;
 
