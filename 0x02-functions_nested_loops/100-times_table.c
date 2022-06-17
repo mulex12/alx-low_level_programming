@@ -1,31 +1,46 @@
 #include "main.h"
-#include "_putchar.c"
 /**
- * print_times_table - print times table of the specified dimension
- * @n: Dimension of times table
- *
- * Return: void
+ * print_times_table - writes a function that prints the n times table
+ * @n: the n times table
  */
-
 void print_times_table(int n)
 {
-	int i;
-	int j;
-	int k;
+	int i, j;
 
-	if (n < 0 || n > 15)
-		return;
-
-	for (i = 0; i <= n; ++i)
+	if (n < 16 && n >= 0)
 	{
-		for (j = 0; j <= n; ++j)
+		for (i = 0; i <= n; i++)
 		{
-			if (j == 0)
+			for (j = 0; j <= n; j++)
 			{
-				_putchar('0');
+				if (j == 0)
+					_putchar(j + '0');
+				else if (j * i < 10)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(j * i + '0');
+				}
+				else if (j * i < 100)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar((j * i) / 10 + '0');
+					_putchar((j * i) % 10 + '0');
+				}
+				else
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar((j * i) / 100 + '0');
+					_putchar(((j * i) / 10) % 10 + '0');
+					_putchar((j * i) % 10 + '0');
+				}
 			}
-			else
-			{
-				k = i * j;
-				_putchar((k < 100) ? ' ' : ('0' + k / 100));
-				_putchar((k <  10) ? ' ' : ('0' + k / 10 % 10));
+			_putchar('\n');
+		}
+	}
+}
