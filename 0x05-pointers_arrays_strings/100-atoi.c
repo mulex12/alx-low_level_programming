@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _atoi - Find and print the first number in a string as an int
  * @s: String to convert to int
