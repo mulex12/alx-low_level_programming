@@ -2,8 +2,8 @@
 /**
  * _pts_recursion - to print out the string value using recursion
  * @s:string
- * return on success 1
- *
+ * 
+ * Return: on success 1
  **/
 void _puts_recursion(char *s)
 {
