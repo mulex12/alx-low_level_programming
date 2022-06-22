@@ -5,7 +5,7 @@
  * @s: string
  *
  * Return: On success 1.
- * On error, errno is set appropriately.
+ * On error, -1 is returned, errno is set appropriately.
  */
 void _puts_recursion(char *s)
 {
