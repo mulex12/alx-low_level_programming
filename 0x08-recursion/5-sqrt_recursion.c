@@ -1,5 +1,4 @@
 #include "main.h"
-#include <math.h>
 /**
  *_sqrt_recursion - to return sqrt of n value
  *@n: integer value
@@ -9,5 +8,5 @@ int _sqrt_recursion(int n)
 {
 if (n < 0)
 return (-1);
-return (sqrt(_sqrt_recursion(n)));
+return (n * _sqrt_recursion(n));
 }
