@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * _pts_recursion - to print out the string value using recursion
+ * _puts_recursion - Prints a string followed by a new line
  * @s: string
- * 
- * Return: on success 1
- * On error, error is set approprietly.
- **/
+ *
+ * Return: On success 1.
+ * On error, errno is set appropriately.
+ */
 void _puts_recursion(char *s)
 {
   if(*s==0)
