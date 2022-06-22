@@ -7,11 +7,11 @@
  */
 int primeofmule(int m, int f)
 {
-if (f < 3)
+if (m == f)
 return (1);
 else if (m % f == 0)
 return (0);
-return (primeofmule(m, f - 1));
+return (primeofmule(m, f + 1));
 }
 /**
  *is_prime_number - return out the prime number
@@ -20,5 +20,5 @@ return (primeofmule(m, f - 1));
  */
 int is_prime_number(int n)
 {
-return (primeofmule(n, n - 1));
+return (primeofmule(n, 2));
 }
