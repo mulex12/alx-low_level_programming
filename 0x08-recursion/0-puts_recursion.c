@@ -1,9 +1,10 @@
 #include "main.h"
 /**
  * _pts_recursion - to print out the string value using recursion
- * @s:string
+ * @s: string
  * 
  * Return: on success 1
+ * On error, error is set approprietly.
  **/
 void _puts_recursion(char *s)
 {
