@@ -1,0 +1,24 @@
+#include "main.h"
+/**
+ *primeofmule - is used to check whether prime or not.
+ *@m: it represent n
+ *@f: it used for loop
+ *
+ */
+int primeofmule(int m, int f)
+{
+if (f < 3)
+return (1);
+else if(m % f == 0)
+return (0);
+return (primeofmule(m, f - 1));
+}
+/**
+ *is_prime_number - return out the prime number
+ *@n: int a number
+ *
+ */
+int is_prime_number(int n)
+{
+return (primeofmule(n, n - 1));
+}
