@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _pts_recursion - to print out the string value using recursion
- * *s:string
+ * @s:string
  * return on success 1
  *
  **/

@@ -1,8 +1,7 @@
 #include "main.h"
-#include <string.h>
 /**
  * _stren_recursion- to print stren
- * *s: string value
+ * @s: string value
  *
  **/
 int _strlen_recursion(char *s)
@@ -13,6 +12,6 @@ int _strlen_recursion(char *s)
       return;
     }
   _putchar(*s);
-  _strlen_recursion(strlen(s+1));
+  return (1 + _strlen_recursion(s+1));
 
 }
