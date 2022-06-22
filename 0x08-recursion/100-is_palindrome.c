@@ -40,5 +40,5 @@ int is_palindrome(char *s)
 	int c;
 
 	c = palofmule1(s, 0);
-	return (palofmul1(s, c));
+	return (palofmule(s, c));
 }
