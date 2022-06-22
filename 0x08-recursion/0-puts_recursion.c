@@ -1,6 +1,8 @@
 #include "main.h"
 /**
- * This is the code to print out the string value using recursion
+ * _pts_recursion - to print out the string value using recursion
+ * *s:string
+ * return on success 1
  *
  **/
 void _puts_recursion(char *s)
