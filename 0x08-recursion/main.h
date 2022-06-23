@@ -10,3 +10,4 @@ int primeofmule(int m, int f);
 int palofmule(char *m, int sl);
 int palofmule1(char *m, int sl);
 int is_palindrome(char *s);
+int wildcmp(char *s1, char *s2);
