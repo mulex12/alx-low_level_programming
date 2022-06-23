@@ -23,11 +23,11 @@ int palofmule1(char *m, int c)
 
 int palofmule(char *a, int c)
 {
-	if (*m != *(m + c))
+	if (*a != *(a + c))
 		return (0);
-	else if (*m == 0)
+	else if (*a == 0)
 		return (1);
-	return (palofmule(m + 1, c - 2));
+	return (palofmule(a + 1, c - 2));
 }
 /**
  * is_palindrome - checks if a string is a palindrome
