@@ -15,7 +15,7 @@ int palofmule1(char *m, int c)
 }
 /**
  * palofmule - compares string vs string reverse
- * @m: string
+ * @a: string
  * @c: lenght of string
  * Return: On success 1.
  * On error, -1 is returned.
