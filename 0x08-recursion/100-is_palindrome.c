@@ -1,44 +1,47 @@
 #include "main.h"
 
 /**
- * palofmule1 - obtains length of m
- * @m: string
- * @c: integer to count length
+ * palind2 - obtains length of a
+ * @a: string
+ * @l: integer to count length
+ *
  * Return: On success 1.
- * On error, -1 is returned.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-int palofmule1(char *m, int c)
+int palind2(char *a, int l)
 {
-	if (*m == 0)
-		return (c - 1);
-	return (palofmule1(m + 1, m + 1));
+	if (*a == 0)
+		return (l - 1);
+	return (palind2(a + 1, l + 1));
 }
 /**
- * palofmule - compares string vs string reverse
+ * palind3 - compares string vs string reverse
  * @a: string
- * @c: lenght of string
+ * @l: length
+ *
  * Return: On success 1.
- * On error, -1 is returned.
+ * On error, -1 is returned, and errno is set appropriately.
  */
 
-int palofmule(char *a, int c)
+int palind3(char *a, int l)
 {
-	if (*a != *(a + c))
+	if (*a != *(a + l))
 		return (0);
 	else if (*a == 0)
 		return (1);
-	return (palofmule(a + 1, c - 2));
+	return (palind3(a + 1, l - 2));
 }
 /**
  * is_palindrome - checks if a string is a palindrome
  * @s: string to evaluate
+ *
  * Return: On success 1.
- * On error, -1 is returned.
+ * On error, -1 is returned, and errno is set appropriately.
  */
 int is_palindrome(char *s)
 {
-	int c;
+	int l;
 
-	c = palofmule1(s, 0);
-	return (palofmule(s, c));
+	l = palind2(s, 0);
+	return (palind3(s, l));
 }
