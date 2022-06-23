@@ -7,6 +7,6 @@ int _sqrt_recursion(int n);
 int sqrtmule(int i, int j);
 int is_prime_number(int n);
 int primeofmule(int m, int f);
-int palind2(char *a, int l);
-int palind3(char *a, int l);
+int palofmule(char *m, int sl);
+int palofmule1(char *m, int sl);
 int is_palindrome(char *s);

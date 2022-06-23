@@ -1,35 +1,35 @@
 #include "main.h"
 
 /**
- * palind2 - obtains length of a
- * @a: string
- * @l: integer to count length
+ * palofmule - obtains length of a
+ * @m: string
+ * @sl: integer to count length
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int palind2(char *a, int l)
+int palofmule(char *m, int sl)
 {
-	if (*a == 0)
+	if (*m == 0)
 		return (l - 1);
-	return (palind2(a + 1, l + 1));
+	return (palofmule(m + 1, sl + 1));
 }
 /**
- * palind3 - compares string vs string reverse
- * @a: string
- * @l: length
+ * palofmule1 - compares string vs string reverse
+ * @m: string
+ * @sl: length
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-int palind3(char *a, int l)
+int palofmule1(char *m, int sl)
 {
-	if (*a != *(a + l))
+	if (*m != *(m + sl))
 		return (0);
-	else if (*a == 0)
+	else if (*m == 0)
 		return (1);
-	return (palind3(a + 1, l - 2));
+	return (palofmule1(m + 1, sl - 2));
 }
 /**
  * is_palindrome - checks if a string is a palindrome
@@ -40,8 +40,8 @@ int palind3(char *a, int l)
  */
 int is_palindrome(char *s)
 {
-	int l;
+	int sl;
 
-	l = palind2(s, 0);
-	return (palind3(s, l));
+	sl = palofmule(s, 0);
+	return (palofmule1(s, sl));
 }
