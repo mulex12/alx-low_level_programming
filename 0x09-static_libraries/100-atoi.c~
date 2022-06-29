@@ -1,0 +1,9 @@
+#include "main.h"
+/**
+ *_atoi- return int
+ *Return: 0
+ */
+int _atoi(char *s)
+{
+	return (0);
+}

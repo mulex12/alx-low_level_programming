@@ -1,0 +1,9 @@
+#include "main.h"
+/**
+ * _puts - it returns void value
+ *Return: 0
+ */
+void _puts(char *s)
+{
+  return (0);
+}

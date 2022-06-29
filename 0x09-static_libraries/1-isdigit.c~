@@ -1,0 +1,9 @@
+#include "main.h"
+/**
+ *_isdigit - returns the digit value
+ *Return: 0
+ **/
+int _isdigit(int c);
+{
+  return (0);
+}

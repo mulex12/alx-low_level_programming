@@ -1,0 +1,9 @@
+#include "main.h"
+/**
+ *_strstr - return the value of char
+ *Return:0
+ */
+char *_strstr(char *haystack, char *needle)
+{
+  return (0);
+}

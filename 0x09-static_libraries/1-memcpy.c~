@@ -1,0 +1,9 @@
+#include "main.h"
+/**
+ *_ismemcpy - returns the memcpy value
+ *Return: 0
+ **/
+int _memcpy(char *dest, char *src, unsigned int n);
+{
+  return (0);
+}
