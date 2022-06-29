@@ -33,3 +33,17 @@ char *argstostr(int ac, char **av)
 	{
 		free(arg_concat);
 		return (NULL);
+	}
+
+	k = 0;
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++, k++)
+		{
+			arg_concat[k] = av[i][j];
+		}
+		arg_concat[k] = '\n';
+		k++;
+	}
+	return (arg_concat);
+}
