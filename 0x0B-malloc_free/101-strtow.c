@@ -3,51 +3,62 @@
 #include <stdlib.h>
 
 /**
- * strtow - function that splits a string into words
- * @str: pointer to the string for processing
- * Return: pointer to an array of strings
- * address of the newly allocated memory
+ * strtow - concatenates all the arguments of your program
+ *@str: string
+ *@av: arguments
+ * Return: a pointer to a new string
  */
-
 char **strtow(char *str)
 {
-	int i, j, k = 0, l, m, count = 0, len;
-	char **words;
+	int i, w, j, k, count, m, wordf;
+	char **p;
+	char *x;
 
-	if (str == NULL || str == '\0')
+	w = 0;
+	j = 0;
+	i = 0;
+	count = 0;
+	if (*str == '\0' || str == NULL)
 		return (NULL);
-
 	for (i = 0; str[i] != '\0'; i++)
-		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
-			count++;
-	if (count == 0)
-		return (NULL);
-	words = malloc((count + 1) * sizeof(char *));
-	if (words == NULL)
 	{
-		free(words);
-		return (NULL);
+		if (str[i] == ' ' && (str[i + 1] != ' ' || str[i + 1] == '\0'))
+			w++;
 	}
-	for (i = 0; str[i] != '\0' &&  k < count; i++)
+	p = (char **)malloc((w + 1) * sizeof(char *));
+	if (p == NULL)
+		return (NULL);
+	for (wordf = 0; str[wordf] && j <= w; wordf++)
 	{
-		if (str[i] != ' ')
+		count = 0;
+		if (str[wordf] != ' ')
 		{
-			len = 0;
-			for (j = i; str[j] != ' ' && str[j] != '\0'; j++)
-				len++;
-			words[k] = malloc((len + 1) * sizeof(char));
-			if (words[k] == NULL)
+			for (i = wordf ; str[i] != '\0'; i++)
 			{
-				for (m = 0; m < k; m++)
-					free(words[k]);
-				free(words);
+				if (str[i] == ' ')
+					break;
+				count++;
+			}
+			*(p + j) = (char *)malloc((count + 1) * sizeof(char));
+			if (*(p + j) == NULL)
+			{
+				for (k = 0; k <= j; k++)
+				{
+					x = p[k];
+					free(x);
+				}
+				free(p);
 				return (NULL);
 			}
-			for (l = 0; l < len; l++, i++)
-				words[k][l] = str[i];
-			words[k][l] = '\0', k++;
+			for (m = 0; wordf < i; wordf++)
+			{
+				p[j][m] = str[wordf];
+				m++;
+			}
+			p[j][m] = '\0';
+			j++;
 		}
 	}
-	words[k] = NULL;
-	return (words);
+	p[j] = NULL;
+	return (p);
 }
