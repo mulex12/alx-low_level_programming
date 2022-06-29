@@ -1,18 +1,34 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
- * _puts - function that prints a string, followed by a new line, to stdout
+ * _strcmp - function that compares two strings
  *
- * @str: parameter defined in main
+ * @s1: parameter defined in main
+ * @s2: parameter defined in main
  *
- * Return: void
+ * Return: 15 or -15 or 0
  */
 
-void _puts(char *str)
+int _strcmp(char *s1, char *s2)
 {
-	while (*str != '\0')
+
+	while (*s1 != '\0')
 	{
-		_putchar(*str);
-		str++;
+		if (*s1 == *s2)
+		{
+			s1++;
+			s2++;
+		}
+		else
+		{
+			if (*s1 > *s2)
+				return (*s1 - *s2);
+			else if (*s1 < *s2)
+				return (*s1 - *s2);
+			s1++;
+			s2++;
+		}
 	}
-	_putchar('\n');
+	return (0);
 }
