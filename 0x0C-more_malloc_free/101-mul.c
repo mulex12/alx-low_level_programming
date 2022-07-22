@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-  * int_calloc - an entry point to calloc but 4 int arrays
+  * int_calloc - special calloc but 4 int arrays
   * @nmemb: n memb
   * @size: size of array
   * Return: int *
