@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "main.h"
-
+#include <math.h>x
 /**
  * binary_to_uint - Function that converts a binary number to an unsigned int.
  * Prototype: unsigned int binary_to_uint(const char *b);
