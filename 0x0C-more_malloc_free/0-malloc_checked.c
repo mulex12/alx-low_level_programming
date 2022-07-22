@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * malloc_checked - entry point to allocate memory
+ * malloc_checked - allocate memory for b
  * @b: whatever they give you
  * Return: void pointer
  */
