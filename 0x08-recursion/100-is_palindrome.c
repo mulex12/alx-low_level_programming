@@ -1,47 +1,41 @@
 #include "main.h"
 
 /**
- * palofmule - obtains length of a
- * @m: string
- * @sl: integer to count length
+ * _strlen_recursion - function that returns the length of a string
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int palofmule(char *m, int sl)
-{
-	if (*m == 0)
-		return (l - 1);
-	return (palofmule(m + 1, sl + 1));
-}
-/**
- * palofmule1 - compares string vs string reverse
- * @m: string
- * @sl: length
+ * @s: parameter defined in main, pointer to memory (string)
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: integer, length of the string
  */
 
-int palofmule1(char *m, int sl)
+int _strlen_recursion(char *s)
 {
-	if (*m != *(m + sl))
+	if (*s == '\0')
+	{
 		return (0);
-	else if (*m == 0)
-		return (1);
-	return (palofmule1(m + 1, sl - 2));
+	}
+	s++;
+	return (1 + _strlen_recursion(s));
 }
+
 /**
- * is_palindrome - checks if a string is a palindrome
- * @s: string to evaluate
+ * is_palindrome - function that returns 1 if a string is a palindrome
+ * and 0 if not
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * @s: parameter defined in main, pointer to memory (string)
+ *
+ * Return: 0 or 1
  */
+
 int is_palindrome(char *s)
 {
-	int sl;
+	int len;
 
-	sl = palofmule(s, 0);
-	return (palofmule1(s, sl));
+	len = _strlen_recursion(s);
+	return (tmp3(s, len));
 }
+
+/**
+ * tmp3 - subfunction for is_palindrome
+ *
+ * @s: parameter defined in main, pointer to memory (string)
