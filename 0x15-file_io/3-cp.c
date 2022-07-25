@@ -24,8 +24,12 @@ char *create_buffer(char *file)
 		exit(99);
 	}
 
-	return (buffer)
+	return (buffer);
 }
+/**
+ * close_file - close file descriptor
+ * @fd: file descriptor
+ */
 void close_file(int fd)
 {
 	int c;
